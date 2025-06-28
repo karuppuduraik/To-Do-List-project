@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-style:normal;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+}
+.containers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:5px;
+ 
+}
+.box,ul,li{
+    list-style-type: none;
+    font-size:10px;
+    margin:5px;
+    
+}
+.box li{
+    font-size: 20px;
+}
+.box h1{
+    font-size: 40px;
+    text-align: center;
+    transform: translateX(-40px);
+    
+}
+.box input{
+ width: 500px;
+ height: 30px;
+ margin-right: 20px;
+ text-align: center;
+ border: none;
+ margin-top: 20px;
+ outline: none;
+ color:rgb(11, 11, 12);
+}
+.line{
+    width: 600px;
+    height: 1px;
+    background-color: black;
+    display:flex;
+    margin-bottom: 20px;
+    transform: translateX(-25px);
+    
+}
+
+#add{
+    width: 100px;
+    padding: 4px;
+    background-color: rgba(37, 37, 231, 0.322);
+    border-radius: 20px;
+    border: solid black 1px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transform: translate(600px) translateY(-55px);
+
+
+
+}
+#del{
+    width: 100px;
+    padding: 4px;
+    background-color: rgba(231, 37, 37, 0.322);
+    border-radius: 20px;
+    border: solid black 1px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-left: 30px;
+}
+#del:hover{
+    width: 100px;
+    padding: 4px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+    border: solid black 1px;
+    color: rgb(252, 252, 252);
+    cursor: pointer;
+    transition:.5s;
+}
+#add:hover{
+    width: 100px;
+    padding: 4px;
+    background-color: rgb(25, 0, 255);
+    border-radius: 20px;
+    border: solid black 1px;
+    color: rgb(252, 252, 252);
+    cursor: pointer;
+    transition:.5s;
+}

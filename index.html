@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-Do-List</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/icon.png">
+    </head>
+    <body>
+        <div class="containers">
+            <div class="box">
+                <h1>To-Do List</h1>
+            <input id="input" placeholder="Type here..." maxlength="100"><div class="line"></div>
+            <button id="add" onclick="plus()">Add</button>
+            <ul id="data">
+                <li>
+                To create  your To-Do list and face your tasks <button id="del" onclick="Delete(event)" style="margin-left:10px;">Delete</button>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+    <script>
+    var ul=document.getElementById("data")
+    var input=document.getElementById("input")
+
+    function plus(){
+      if(input.value.trim() === "") return;
+      var listitem=document.createElement("li")
+      var btn = document.createElement("button")
+      btn.innerText="Delete"
+      btn.id="del"
+      btn.onclick = Delete
+      listitem.innerText = input.value + ""
+      listitem.appendChild(btn)
+      ul.appendChild(listitem)
+      input.value = ""
+      alert("Item Added Sucessfully!")
+
+
+
+    }
+    function Delete(event){
+    event.target.parentElement.remove()
+   
+    
+   }
+
+
+    </script>
+
+    </body>
+</html>
