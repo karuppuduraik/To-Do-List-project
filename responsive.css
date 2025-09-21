@@ -1,0 +1,181 @@
+/* responsive.css - Responsive styles for To-Do List App */
+
+/* Mobile First Approach */
+@media screen and (max-width: 767px) {
+    .box {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    .box h1 {
+        font-size: 32px !important;
+        transform: translateX(0) !important;
+        margin-bottom: 15px;
+    }
+    
+    .box input {
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+    }
+    
+    .line {
+        width: 100% !important;
+        transform: translateX(0) !important;
+        margin-bottom: 15px;
+    }
+    
+    #add {
+        width: 100% !important;
+        transform: translate(0) translateY(0) !important;
+        margin-bottom: 20px;
+        padding: 8px !important;
+    }
+    
+    .box li {
+        font-size: 18px !important;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+    }
+    
+    #del {
+        width: 80px !important;
+        margin-left: 15px !important;
+        flex-shrink: 0;
+        padding: 6px !important;
+    }
+    
+    ul#data {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .box {
+        width: 90%;
+        max-width: 600px;
+        padding: 20px;
+    }
+    
+    .box h1 {
+        transform: translateX(0) !important;
+        margin-bottom: 20px;
+    }
+    
+    .box input {
+        width: 70% !important;
+    }
+    
+    .line {
+        width: 85% !important;
+        transform: translateX(0) !important;
+    }
+    
+    #add {
+        transform: translate(0) translateY(0) !important;
+        margin: 15px 0;
+        display: block;
+    }
+    
+    .box li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    
+    #del {
+        flex-shrink: 0;
+    }
+}
+
+/* Desktop Adjustments */
+@media screen and (min-width: 1024px) {
+    .box {
+        width: 80%;
+        max-width: 800px;
+        padding: 30px;
+    }
+    
+    .box h1 {
+        transform: translateX(0) !important;
+    }
+    
+    .line {
+        transform: translateX(0) !important;
+        width: 100% !important;
+    }
+    
+    #add {
+        transform: translate(0) translateY(0) !important;
+        margin: 15px 0;
+        display: block;
+    }
+    
+    .box li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Input and button focus states for accessibility */
+.box input:focus {
+    outline: 2px solid #4a90e2;
+}
+
+#add:focus, #del:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+/* Animation for adding new items */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#data li {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    #add {
+        background-color: #0000ff !important;
+        color: #fff !important;
+        border: 2px solid #000 !important;
+    }
+    
+    #del {
+        background-color: #ff0000 !important;
+        color: #fff !important;
+        border: 2px solid #000 !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    #data li {
+        animation: none;
+    }
+    
+    #add:hover, #del:hover {
+        transition: none;
+    }
+}
