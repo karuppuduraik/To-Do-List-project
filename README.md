@@ -18,12 +18,6 @@ A clean, responsive to-do list web application that helps you organize and manag
 3. Click the "Add" button to add the task to your list
 4. Click the "Delete" button next to any task to remove it from your list
 
-## File Structure
-todo-list/
-├── index.html # Main application file
-├── style.css # Primary styling
-├── responsive.css # Responsive design and accessibility features
-
 ## Technologies Used
 
 - HTML5
