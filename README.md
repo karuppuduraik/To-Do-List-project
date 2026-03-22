@@ -24,6 +24,7 @@ A clean, responsive to-do list web application that helps you organize and manag
 - CSS3 (with responsive design and animations)
 - JavaScript (ES6+)
 - Mobile-first responsive approach
+- Bootstrap5.3
 
 ## Browser Compatibility
 
